@@ -51,7 +51,7 @@ function Player() {
 
 	const handlePlayPause = () => {
 		spofitfyApi.getMyCurrentPlaybackState().then((data) => {
-			if (data.body.is_playing) {
+			if (data?.body?.is_playing) {
 				spofitfyApi.pause();
 				setIsPlaying(false);
 			} else {
